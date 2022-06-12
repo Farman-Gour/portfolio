@@ -1,0 +1,64 @@
+@use 'main';
+@use 'header';
+@use 'footer';
+
+/*about  */
+// .active{}
+.wrap-1 .nav .active a{color: #dae934;}
+.wrap-2{background: #0f172a;padding: 120px 0px;color: #fff;}
+.wrap-2 .head{text-align: center;margin-bottom: 70px;}
+.wrap-2 .head :nth-child(1){color: #dae934;font-size: 50px; font-weight: bold;}
+.wrap-2 .head :nth-child(2){font-size: 20px; word-spacing: 5px;}
+.wrap-2 h2{margin: 20px 0px;}
+.picInfo{border: solid 4px #dae934;position: relative;padding: 200px 30px 0px 40px;margin:0px 60px;cursor: pointer; border-radius: 10px;}
+.wrap-2 .picInfo h2{text-align: center;}
+.wrap-2 .picInfo p{text-align: justify;}
+.wrap-2  img{width: 150px; height: 150px; border-radius: 50%;position: absolute;top: 20px;left: 150px;box-shadow: 0px 0px 14px #000;}
+.wrap-2 .picSocial{margin: 30px 0px;text-align: center;}
+.wrap-2 .picSocial a{padding: 15px;margin: 5px 10px;background: #808080;border-radius: 50%;display: inline-block;width: 60px;border: solid 2px #000;}
+.wrap-2 .picSocial a:hover{background: #6e6d6d;}
+.wrap-2 .picSocial a span{color: #000; font-size: 25px;}
+.wrap-2 table tr{line-height: 30px;}
+
+
+/* wrap three */
+.wrap-3 h3{font-size: 24px;}
+
+/* responsive design */
+
+/* ipad landscape  */
+ @media screen and (max-width:1220px){
+    .container{width: 980px;}
+    .picInfo{margin: 0px 20px;padding: 200px 10px  0px 10px;}
+    .wrap-2 img{left: 130px;}
+}
+
+/* ipad portrait */
+@media screen and (max-width:980px){
+    .container{width:760px}
+    .wrap-2 img{left: 80px;}
+    .wrap-2 .picSocial a{padding: 13px;width: 53px; margin: 5px;}
+    .wrap-2 table tr td{width: 110px;}
+    .wrap-2 table tr{line-height: 36px;}
+    
+    
+}
+
+/* mobile landscape */
+@media screen and (max-width:767px){
+    .container{width:100%}
+    .wrap-2 table tr{line-height: 30px;}
+    
+}
+
+/* mobile portrait */
+@media screen and (max-width:480px){
+    .container{width: 100%;}
+    .row .col-m-12{flex-basis: 100%;}
+    .center{padding-left: 20px;}
+    .wrap-2 .head{margin-bottom: 30px;}
+    .picInfo{margin: 40px 10px 0px 10px;}
+    .wrap-2 img{left: 90px;}
+
+    
+}
