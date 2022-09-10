@@ -1,0 +1,85 @@
+@use 'main';
+@use 'header';
+@use 'footer';
+.wrap-1 .nav .active a{color: #dae934;}
+.wrap-3 h3{font-size: 24px;}
+
+/* background */
+
+/* wrap two */
+.wrap-2 {padding: 100px 0px;background: #0f172a; color: #fff;}
+.wrap-2 .head{text-align: center;margin-bottom: 70px;}
+.topHeading span{
+    color: #dae934;
+    font-size: 50px;
+    font-weight: bold;
+    display: inline-block;
+    animation: moveup 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+    }
+    @keyframes moveup {
+        0%, 40%, 100%{
+            transform: translateY(0px);
+        }
+        20%{
+            transform: translateY(-20px);
+        }
+    }
+.wrap-2 .head p{font-size: 20px; word-spacing: 5px;}
+.wrap-2 h2{margin: 20px 0px;}
+.wrap-2 .html5{border: solid 4px ;width: 100%px;border-radius: 30px 0px; box-shadow: 0px 0px 5px 2px #000;height: 270px;text-align: center;cursor: pointer;overflow: hidden;margin: 20px 0px;
+    background: linear-gradient(-45deg,#3eecac, #ee74e1, #33eeee,#ee74e1,#3eecac,#33eeee);
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.wrap-2 .html5  img{transition-duration: 1s;margin-top: 80px;}
+.wrap-2 .html5:hover img{transform: rotate(360deg);box-shadow: 0px 0px 150px 150px #127681;width:90px;height: 90px;}
+.wrap-2 .html5 img{border-radius: 50%; width:60px;height: 60px;text-align: center;}
+
+/* responsive design */
+
+/* ipad landscape */
+@media screen and (max-width:1220px){
+    .container{width: 960px;}
+    .wrap-2 .html5{height: 235px;}
+}
+
+/* ipad portrait */
+@media screen and (max-width:980px){
+    .container{width: 760px;}
+    .wrap-2 .html5{height: 200px;}
+    .wrap-2 .html5 img{margin-top: 60px;}
+}
+
+/* mobile landscape */
+@media screen and (max-width:767px){
+    .container{width: 100%;}
+    .wrap-2 .html5{height: 155px;}
+    .wrap-2 .html5 img{margin-top: 50px; width: 50px; height: 50px;}
+    .wrap-2 .html5:hover img{width:70px;height: 70px;}
+    .topHeading span{font-size: 40px;}
+    .wrap-2 .head{margin-bottom: 30px;}
+    .wrap-2{padding: 70px 0px;}
+}
+
+/* mobile portrait */
+@media screen and (max-width:480px){
+    .container{width: 100%;}
+    .row .col-m-6{flex-basis: 50%;}
+    .row .col-m-12{flex-basis: 100%;}
+    .topHeading span{font-size: 32px;}
+    .wrap-2{padding: 70px 0px;}
+    .wrap-2 .head p{font-size: 16px; word-spacing: 3px;}
+    .wrap-2 .head{margin-bottom: 30px;}
+}

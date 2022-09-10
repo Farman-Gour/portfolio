@@ -1,0 +1,106 @@
+@use 'main';
+@use 'header';
+@use 'footer';
+.wrap-1 .nav .active a{color: #dae934;}
+.wrap-3 h3{font-size: 24px;}
+
+.wrap-2{background: #0f172a; padding: 100px 0px;color: #fff; }
+.wrap-2 .head{text-align: center;margin-bottom: 50px;}
+ .topHeading span{
+    color: #dae934;
+    font-weight: bold;
+    margin: 20px 0px;
+    display: inline-block;
+    animation: moveup 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+    font-size: 50px;
+}
+
+@keyframes moveup {
+    0%,40%, 100% {
+        transform: translateY(0);
+    }
+    20%{
+        transform: translateY(-20px);
+    }
+}
+.wrap-2 .head p{font-size: 20px; word-spacing: 5px;}
+
+.wrap-2 .pbody{box-shadow: 0px 0px 7px 5px #dae934; border-radius: 10px;overflow: hidden;margin: 30px 15px;animation: fadeBox 3s ease;}
+
+@keyframes fadeBox {
+    0%{
+        opacity:0;
+        transform: translateY(50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+.wrap-2 .pbody:hover{cursor: pointer;}
+.wrap-2 .pbody:hover img{transform: scale(1.1);}
+.wrap-2 .pic img{width: 100%; height: 250px;border-radius: 10px 10px 0px 0px;transition-duration: 1s;}
+.wrap-2 .pbody .info{text-align: center;}
+.wrap-2 .pbody .info :nth-child(1){
+    font-size: 25px;
+    margin: 20px 0px;
+    background-image: linear-gradient(
+        225deg,
+        #ec6d3b 0%,
+        #46bdf8 29%,
+        #ff1361 67%,
+        #fff800 100%
+        );
+        background-size: 200% auto;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 2s linear infinite;
+    }
+    
+    @keyframes textclip {
+        to{
+            background-position: 200%  center;
+        }
+    }
+.wrap-2 .pbody .github{display: inline-block;padding: 10px 0px;}
+.wrap-2 .pbody .page,.wrap-2 .pbody .host{margin: 30px 10px 30px 0px;}
+.wrap-2 .pbody .link{text-align: center;}
+.wrap-2 .pbody .github a{font-size: 20px;border: solid 2px #dae934;color: #dae934;padding: 10px 20px; border-radius: 5px;} 
+.wrap-2 .pbody .github:hover{box-shadow: 0px 0px 13px  5px #dae934;}
+
+/* responsive design */
+
+/* ipad landscape */
+@media screen and (max-width:1220px){
+    .container{width: 960px;}
+    .wrap-2 .pbody .github a {font-size: 19px;padding: 10px 17px;}
+    .wrap-2 .pic img{height: 200px;}
+}
+
+/* ipad portrait */
+@media screen and (max-width:980px){
+    .container{width:760px}
+    .row .col-t-6{flex-basis: 50%;}
+    .wrap-2 .pbody .github a {font-size: 20px;padding: 10px 20px;}
+    .wrap-2 .pic img{height: 220px;}
+}
+
+/* mobile landscape */
+@media screen and (max-width:767px){
+    .container{width:100%}
+    .wrap-2{padding: 70px 0px;}
+    .topHeading span{font-size: 40px;}
+    .wrap-2 .pic img{height: 200px;}
+}
+
+/* mobile portrait */
+@media screen and (max-width:480px){
+    .container{width: 100%;}
+    .row .col-m-12{flex-basis: 100%;}
+    .wrap-2 .pic img{height: 250px;}
+    .topHeading span{font-size: 32px;}
+    .wrap-2{padding: 70px 0px;}
+    .wrap-2 .head p {font-size: 16px;word-spacing: 3px;}
+}

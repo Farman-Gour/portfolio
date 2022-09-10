@@ -1,0 +1,56 @@
+/* wrap three */
+.wrap-3{background: #0f2901; color: #fff;padding: 30px 0px;}
+.wrap-3 .about{padding: 0px 60px 0px 0px;}
+.wrap-3  h2{font-weight: bold;}
+.wrap-3 .about p{text-align: justify;margin: 20px 0px;}
+.wrap-3 .about .social{display: flex;}
+.wrap-3 .about .social a{display:block; padding: 10px; margin: 0px 10px; width: 50px;text-align:center;background: #3a4144;border-radius: 50%;transition: all ease 1s;overflow: hidden;}
+.wrap-3 .about .social a span{color: #fff;font-size: 30px; transition-duration: 1s;}
+.wrap-3 .about .social a:hover{box-shadow: 0px 0px 10px 3px red;;}
+.wrap-3 .about .social a:hover span{ color: #000;transform: rotate(360deg);box-shadow: 0px 0px 40px 40px #dae934; ; background: #dae934;;}
+.wrap-3 .links{line-height: 28px;padding-left: 50px;}
+.wrap-3 .links p a{color: #fff;}
+.wrap-3 .links p a span{font-size: 25px;color: #fff;}
+.wrap-3 .ques{line-height: 35px;}
+.wrap-3 .ques p a{color:#fff;text-decoration: underline;}
+
+.wrap-3 footer{margin-top: 40px;}
+.wrap-3 footer {margin:30px  auto;word-spacing:8px;}
+.wrap-3 .btn{background: transparent;padding: 10px;border-radius: 10px;border: solid #dae934;position: fixed;right: 5px;bottom: 15px;}
+.wrap-3 .btn:hover{box-shadow: 0px 0px 5px 2px #dae934;}
+.wrap-3 .btn span{color: #fff;font-size: 20px;text-shadow: 0px 0px 7px #000;}         
+
+/* Responsive Design */
+
+/* ipad landscape */
+@media screen and (max-width:1220px){
+    .container{width: 960px;}
+    .wrap-3 .about{padding-right: 10px;}
+}
+
+/* ipad portrait */
+@media screen and (max-width:980px){
+    .container{width: 760px;}
+    .wrap-3 .about .social a{margin: 0px 4px;width: 44px;}
+    .wrap-3 .about .social a span{font-size: 25px;}
+}
+
+/* mobile landscape */
+@media screen and(max-width:767px){
+    .container{width: 100%;}
+    .wrap-3 .about .social a{margin: 0px 4px;width: 25px; height: 25px;padding: 0px;}
+    .wrap-3 .about .social a span{font-size: 14px;}
+    .wrap-3 .ques{line-height: 30px;}
+    p{font-size: 14px;}
+
+}
+
+/*  mobile portrait */
+@media screen and (max-width:480px){
+    .wrap-3 .about{padding: 0px;text-align: center;}
+    .wrap-3 .about .social{display: flex; justify-content: center;}
+    .wrap-3 .links{line-height: 28px;text-align: center;padding-left: 0px;margin-top: 30px;}
+    .wrap-3 .ques{line-height: 35px; text-align: center;margin-top: 30px;}
+    .wrap-3 footer {word-spacing: 4px;}
+
+}

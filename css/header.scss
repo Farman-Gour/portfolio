@@ -1,0 +1,57 @@
+.wrap-1{background: #242b2e; color: #fff; height: 65px; position: fixed;width: 100%;z-index: 20;}
+.wrap-1 header h1 a{color: inherit; font-size: 42px; font-weight: bold;margin: 5px;}
+.wrap-1 .nav{display: flex; justify-content: right;}
+.wrap-1 .nav ul{display: flex;}
+.wrap-1 .nav ul li{ cursor: pointer;margin-left: 20px;}
+.wrap-1 .nav ul li a{color: inherit; font-size: 19px; padding: 5px 12px; display: block; text-align: center;transition:width ease 1s; width: 0%;}
+.wrap-1 .nav ul li:hover a{color:  #dae934;border-bottom: solid 2px; width: 100%;}
+
+.wrap-1 .mobile{display: none;float: right;}
+.wrap-1 .mobile .navBtn{ width: 45px; height: 40px; cursor: pointer; }
+.wrap-1 .mobile .navBtn .line{border-top: 3px solid #fff;margin: 10px 5px;transition: all ease 1s;}
+.wrap-1 .mobile .active .f{transform: rotate(-44deg); transform-origin: right;margin:10px 7px 0px 0px;border-color: #dae934;}
+.wrap-1 .mobile .active .l{transform: rotate(45deg); transform-origin: right;margin:25px 8px 0px 0px;border-color: #dae934;}
+
+.align-center{position: relative;}
+.mobNavbar{position: absolute;top: 60px; z-index: 20;left: -40px;right: 0px; display: none;}
+.mobNavbar .active{background: #242b2e;}
+.mobNavbar ul li{background: #848383;border: solid 2px #848383;}
+.mobNavbar ul li:active{background: #242b2e;}
+.mobNavbar ul li:active a{color: #dae934;padding: 15px 0px 15px 20px;}
+.mobNavbar ul li a{color: #fff;font-size: 20px;display: block;padding: 10px 0px 10px 20px;}
+
+
+
+/* Responsive Design */
+
+/* ipad landscape */
+ @media screen and (max-width:1220px){
+    .container{width: 960px;}
+} 
+
+/* ipad portrait */
+@media screen and (max-width:980px){
+    .container{width: 760px;}
+    .wrap-1 .nav ul li{margin-left: 3px;}
+    .wrap-1 .nav ul li a{font-size: 15px;}
+    .wrap-1 header h1 a{font-size: 35px;}
+}
+
+/* mobile landscape */
+@media screen and (max-width:767px){
+    .container{width: 100%;}
+    .wrap-1 .mobile{display: block;}
+    .wrap-1 .nav{display: none;}
+    .wrap-1 header h1 a{font-size: 20px;}
+    .wrap-1 .nav ul li a{padding: 5px 7px;}
+    .wrap-1 .align-center{margin-top: 5px;}
+}
+
+/* mobile portrait */
+@media screen and (max-width:480px){
+    .container{width: 100%;}
+    .wrap-1 .mobile{display: block;}
+    .wrap-1 .nav{display: none;}
+    .wrap-1 header h1 a{font-size: 16px;}
+ }
+

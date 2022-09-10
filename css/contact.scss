@@ -1,0 +1,93 @@
+@use 'main';
+@use 'header';
+@use 'footer';
+.wrap-1 .nav .active a{color: #dae934;}
+.wrap-3 h3{font-size: 24px;}
+
+.wrap-2{background: #0f172a; padding: 100px 0px;color: #fff; }
+.wrap-2 .head{text-align: center;margin-bottom: 50px;}
+ .topHeading span{
+    color: #dae934;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 20px 0px;
+    display: inline-block;
+    animation: 1s moveup infinite;
+    animation-delay: calc(.1s * var(--i));
+}
+@keyframes moveup {
+    0%, 40%, 100%{
+        transform: translateY(0px);
+    }
+    20%{
+        transform: translateY(-20px);
+    }
+}
+.wrap-2 .head p{font-size: 20px; word-spacing: 5px;}
+.wrap-2  h2{color: #dae934;margin: 10px 0px;}
+.wrap-2 .form label{display: none;}
+.wrap-2 .form textarea{resize: none;font-size:20px ; color: #fff;padding: 10px;border-radius:6px ; background: #21428f;margin: 10px 0px;width: 100%;}
+.wrap-2 .form input{padding: 15px 10px;border-radius:6px ; background: #21428f;border: none;font-size: 20px;color: #fff;margin: 10px 0px;}
+.wrap-2 .form input::placeholder,.wrap-2 .form textarea::placeholder{color: #fff;font-size: 20px;}
+.wrap-2 .form textarea:focus , .wrap-2 .form input:focus{color: #fff; font-size: 20px;}
+
+.wrap-2  .form .btnform{margin:15px 0px 0px 0px;font-size: 20px;border: solid 2px #dae934;color: #dae934;padding: 15px 0px; border-radius: 5px;background: #21428f;width: 100%;}
+.wrap-2 .form .btnform:hover{box-shadow: 0px 0px 8px 2px #dae934;}
+.wrap-2 ul li{color: #fff; list-style:disc}
+.wrap-2 ul li a{color: #fff;}
+.wrap-2 .information{margin:0px 100px;}
+.wrap-2 .information p{margin:15px 0px;}
+.wrap-2 .information p a{color: #fff; text-decoration: underline;}
+.wrap-2 .information ul li{margin:15px 0px;}
+.wrap-2 .information ul li:hover{color: #dae934;}
+
+/* responsive design */
+
+/* ipad landscape */
+
+@media screen and (max-width:1220px){
+    .container{width:960px}
+    .wrap-2 .form input{font-size: 16px;padding: 15px 5px;}
+    .wrap-2 .form textarea:focus , .wrap-2 .form input:focus{font-size: 16px;}
+}
+
+/* ipad portrait */
+
+@media screen and (max-width:980px){
+    .container{width: 760px;}
+    .wrap-2 .form input{font-size: 12px;padding: 15px 5px;}
+    .wrap-2 .form textarea:focus , .wrap-2 .form input:focus{font-size: 12px;}
+    .wrap-2 .form input::placeholder,.wrap-2 .form textarea::placeholder{font-size: 12px;}
+    .wrap-2 .information{margin:0px 60px;}
+    
+}
+
+/* mobile landscape */
+
+@media screen and (max-width:767px){
+    .container{width: 100%;}
+    .wrap-2 .form input{padding: 15px 5px;width: 100%;}
+    .topHeading span{font-size: 40px;}
+    .wrap-2 .information{margin: 0px 20px;}
+    .wrap-2 {padding: 70px 0px;}
+}
+
+/* mobile portrait */
+
+@media screen and (max-width:480px){
+    .container{width: 100%;}
+    .wrap-2 .form{margin: auto;width: 328px;}
+    .row .col-m-12{flex-basis: 100%;}
+    .wrap-2 .form input{padding: 15px 0px;text-align: center;}
+    .wrap-2 .form textarea{font-size: 12px;}
+    .wrap-2 .information{margin:0px 30px;}
+    .wrap-2 .form input::placeholder,.wrap-2 .form textarea::placeholder{font-size: 12px;text-align: center;} 
+     .wrap-2 .form input:focus{text-align: center;}
+    .wrap-2  .form .btnform{font-size: 18px;}
+    .topHeading span{font-size: 32px;}
+    .wrap-2 .head p {font-size: 16px;}
+    .wrap-2 {padding: 70px 0px;}
+    .row .col-m-6{flex-basis: 50%;}
+    .wrap-2 .jshello{text-align: center;}
+
+}
